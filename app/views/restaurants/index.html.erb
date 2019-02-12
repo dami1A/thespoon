@@ -1,0 +1,15 @@
+<h1>Restaurants list</h1>
+<%  time = Time.now %>
+<p>Now is <%= time %></p>
+
+<h2>Find lot of restaurants</h2>
+<p><%= link_to 'add a restaurant', new_restaurant_path %></p>
+<!-- to complete  -->
+<ol>
+  <% @restaurants.each do |restaurant %>
+   <li>
+    <%= restaurant.name %>
+    <p><%= link_to 'show', retaurant_path(restaurant) %> | <%= link_to 'destroy', delete_restaurant_path(@restaurant) %></p>
+  </li>
+</ol>
+
